@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "real-time chat application server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "server": "node index.js"
+  },
+  "author": "nagaraj_biradar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "socket.io": "^4.5.4"
+  }
+}
