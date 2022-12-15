@@ -106,3 +106,68 @@ img {
   width: 100vw;
   height: 100vh;
 }
+.contacts::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.contacts::-webkit-scrollbar-thumb {
+  background-color: #ffffff39;
+  width: 0.1rem;
+  border-radius: 1rem;
+}
+
+.selected {
+  background-color: #9186f3;
+}
+
+.EmojiPickerReact epr-main {
+  position: absolute;
+  top: -150px;
+  background-color: #080420;
+  box-shadow: 0 5px 10px #9a86f3;
+  border-color: #9a86f3;
+  height: 250px;
+  width: 200px;
+  z-index: 50;
+}
+
+.emoji-scroll-wrapper::-webkit-scrollbar {
+  background-color: #080420;
+  width: 5px;
+}
+
+.emoji-scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #9a86f3;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #ffffff39;
+  width: 0.1rem;
+  border-radius: 1rem;
+}
+
+.content {
+  max-width: 40%;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  color: #d1d1d1;
+  @media screen and (min-width: 720px) and (max-width: 1080px) {
+    max-width: 70%;
+  }
+}
+.sended {
+  justify-content: flex-end;
+}
+.sended .content {
+  background-color: #4f04ffa6;
+}
+.recieved {
+  justify-content: flex-start;
+}
+.recieved .content {
+  background-color: #9900ffe8;
+}

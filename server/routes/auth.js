@@ -12,7 +12,7 @@ const router = express.Router();
 // Routes
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.post("/allusers/:id", getAllUsers);
+router.get("/allusers/:id", getAllUsers);
 router.post("/setavatar/:id", setAvatar);
 // router.post("/logout/:id", logOut);
 

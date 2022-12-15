@@ -1,7 +1,7 @@
 const User = require("../models/userModel.js");
 const bcrypt = require("bcrypt");
 
-// Register User
+// Register User || POST
 const registerUser = async (req, res) => {
   try {
     const { username, email, password, confirmPassword } = req.body;
@@ -25,10 +25,9 @@ const registerUser = async (req, res) => {
   }
 };
 
-// Login User
+// Login User || POST
 const loginUser = async (req, res) => {
   try {
-    console.log(req.body);
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     const verifyPassword = await bcrypt.compare(password, user.password);
@@ -45,7 +44,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-// Set Avatar
+// Set Avatar || POST
 const setAvatar = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -67,16 +66,16 @@ const setAvatar = async (req, res) => {
   }
 };
 
-// Get All Users
+// Get All Users || GET
 const getAllUsers = async (req, res) => {
   try {
-    const id = req.params.id;
-    const users = await User.find({ _id: { $ne: id } }).select([
+    const users = await User.find({ _id: { $ne: req.params.id } }).select([
       "email",
       "username",
       "avatarImage",
       "_id",
     ]);
+
     return res.json(users);
   } catch (error) {
     console.log(error);
